@@ -30,4 +30,6 @@ class SampleCoverageTest extends \PHPUnit_Framework_TestCase
         $actual   = $sample->executeClosureCall(2, 3);
         $this->assertEquals($expected, $actual);
     }
+
+
 }
