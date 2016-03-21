@@ -8,45 +8,12 @@ namespace Php7Cov;
  */
 class SampleCoverage
 {
-    private $stackErrors = [];
-
     /**
      *
      */
     public function __construct()
     {
         ini_set('assert.exception', '1');
-        set_exception_handler([$this, "handleException"]);
-    }
-
-    /**
-     *
-     */
-    public function handleException(Throwable $e)
-    {
-        $this->stackErrors[] = $e;
-    }
-
-    /**
-     *
-     */
-    public function isEnableDbC(string $name) : bool
-    {
-        assert(false, new \InvalidArgumentException("hogeじゃない[$name]"));
-
-        if (strlen($name) <= 0) {
-            return false;
-        }
-
-        return true;
-    }
-
-    /**
-     *
-     */
-    public function getLastException() : array
-    {
-        return $this->stackErrors;
     }
 
     /**
@@ -129,6 +96,9 @@ class SampleCoverage
      */
     public function executeGenerator(int $first, int $second) : array
     {
+        assert($first < $second
+            ,new \AssertionError("数字指定がおかしい: first[$first] second[$second]"));
+
         $yield1 = function() use($first) {
             for ($iii = 0; $iii < $first; ++$iii) {
                 yield $iii;
