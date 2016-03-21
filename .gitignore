@@ -1,0 +1,5 @@
+composer.lock
+composer.phar
+info.php
+src/bin/
+sec/lib/vendor

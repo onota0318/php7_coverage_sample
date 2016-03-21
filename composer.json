@@ -1,0 +1,18 @@
+{
+    "name": "php7_coverage",
+    "require": {
+        "phpunit/phpunit": "5.2",
+        "phpunit/php-code-coverage": "^3"
+    },
+    "config": {
+        "process-timeout" : 900
+       ,"vendor-dir" : "./src/lib/vendor/"
+       ,"bin-dir" : "./src/bin/"
+    },
+    "autoload": {
+       "psr-0": {
+        "Php7Cov\\": "./src/main/",
+        "Php7CovTest\\": "./src/test/"
+      }
+    }
+}
