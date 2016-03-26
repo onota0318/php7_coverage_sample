@@ -1,0 +1,6 @@
+TAP version 13
+ok 1 - Php7CovTest\SampleCoverageTest::test_NULL合体演算子のテスト
+ok 2 - Php7CovTest\SampleCoverageTest::test_ClosureCallのテスト
+ok 3 - Php7CovTest\SampleCoverageTest::test_Expectationのテスト
+ok 4 - Php7CovTest\SampleCoverageTest::test_ジェネレータのテスト
+1..4
